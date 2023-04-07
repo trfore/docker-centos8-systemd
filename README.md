@@ -1,6 +1,6 @@
 # docker-centos8-systemd
 
-![build](https://github.com/trfore/docker-centos8-systemd/workflows/build/badge.svg?branch=main&event=push)
+[![build](https://github.com/trfore/docker-centos8-systemd/workflows/build/badge.svg?branch=main&event=push)](https://github.com/trfore/docker-centos8-systemd/actions/workflows/build.yml)
 
 A minimal systemd enabled CentOS Stream 8 Docker image for testing Ansible roles with Molecule.
 
