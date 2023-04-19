@@ -1,8 +1,5 @@
-FROM quay.io/centos/centos:stream8
-
-LABEL org.label-schema.author="Taylor Fore (GitHub @trfore)" \
-    org.label-schema.name="docker-centos8-systemd" \
-    org.label-schema.vcs-url="https://github.com/trfore/docker-centos8-systemd"
+ARG BASEOS_DIGEST
+FROM quay.io/centos/centos:stream8${BASEOS_DIGEST:-}
 
 ENV container docker
 
