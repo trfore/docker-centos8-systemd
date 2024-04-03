@@ -36,7 +36,7 @@ platforms:
       - /run
       - /tmp
     volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
     cgroupns_mode: host
     privileged: true
     pre_build_image: true
@@ -49,7 +49,7 @@ platforms:
 3. Run a container from the image:
 
 ```sh
-docker run -d -it --name centos8-systemd --privileged --cgroupns=host --tmpfs=/run --tmpfs=/tmp --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro trfore/docker-centos8-systemd:latest
+docker run -d -it --name centos8-systemd --privileged --cgroupns=host --tmpfs=/run --tmpfs=/tmp --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw trfore/docker-centos8-systemd:latest
 ```
 
 4. Use it, example:
