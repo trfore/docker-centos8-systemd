@@ -1,11 +1,10 @@
 name: CI
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
     branches: [main]
     paths:
       - "Dockerfile"
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
