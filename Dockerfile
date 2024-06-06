@@ -3,11 +3,15 @@ FROM quay.io/centos/centos:stream8${BASEOS_DIGEST:-}
 
 ENV container docker
 
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Stream-* \
+  && sed -i 's|#baseurl=http://mirror.centos.org|baseurl=https://vault.centos.org|g' /etc/yum.repos.d/CentOS-Stream-*
+
 RUN yum -y update \
   && yum -y install \
   epel-release \
   hostname \
   initscripts \
+  python3 \
   sudo \
   which \
   && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
