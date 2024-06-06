@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'Dockerfile'
+      - "Dockerfile"
   pull_request:
 
 jobs:
-  test_build:
-    uses: trfore/docker-image/.github/workflows/test_systemd.yml@main # remote repo
+  test:
+    uses: trfore/docker-image/.github/workflows/test_systemd.yml@main
